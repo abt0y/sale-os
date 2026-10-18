@@ -3,7 +3,8 @@ import { Plus, Pencil, Trash2, MessageCircle, FileText, Search } from 'lucide-re
 import { useApp } from '@/store/AppContext';
 import type { Currency, Lead, LeadStage } from '@/domain/types';
 import { formatCurrency, formatDate, daysUntil } from '@/domain/calculations';
-import { Badge, Button, Card, EmptyState, Field, Input, Select, Textarea } from '@/components/Form';
+import { Badge, Card, EmptyState, Field, Input, Select, Textarea } from '@/components/Form';
+import { Button } from '@/components/Button';
 import { Modal, ConfirmDialog } from '@/components/Modal';
 import { WhatsAppModal } from '@/integrations/WhatsAppModal';
 

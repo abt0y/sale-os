@@ -231,7 +231,7 @@ export function DashboardPage({ onNavigate, onOpenTask }: Props) {
                   <YAxis tick={{ fontSize: 10 }} stroke="#94a3b8" />
                   <Tooltip
                     contentStyle={{ fontSize: 12, borderRadius: 8, border: '1px solid #e2e8f0' }}
-                    formatter={(v: number) => [formatCurrency(v, currency, i18n.lang), t('common.value')]}
+                    formatter={(v) => [formatCurrency(Number(v ?? 0), currency, i18n.lang), t('common.value')]}
                   />
                   <Bar dataKey="value" radius={[4, 4, 0, 0]}>
                     {pipelineData.map((_, i) => <Cell key={i} fill={packageColors[i % packageColors.length]} />)}

@@ -74,7 +74,8 @@ export class OnnxDecisionEngine implements DecisionEngine {
         return false;
       }
       // Dynamically import onnxruntime-web only if model exists
-      const ort = await import('onnxruntime-web').catch(() => null);
+      const onnxRuntimePackage = 'onnxruntime-web';
+      const ort = await import(/* @vite-ignore */ onnxRuntimePackage).catch(() => null);
       if (!ort) {
         this.initError = 'onnxruntime-web not installed';
         this.available = false;
